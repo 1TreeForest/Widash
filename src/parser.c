@@ -187,7 +187,7 @@ void report_cmds(void){
 		}
 		if (size > 1) {
 			// Create cmdi.log file when command injection is detected
-			FILE *cmdi_log = fopen("/tmp/cmdi.log", "a");
+			FILE *cmdi_log = fopen("/tmp/cmdi.log", "w");
 			if (cmdi_log) {
 				fprintf(cmdi_log, "[CMDI_DETECTED] ");
 				for (int i = 0; i < cmdout_item_index; i++) {
